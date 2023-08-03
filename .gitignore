@@ -1,24 +1,349 @@
-# Compiled class file
-*.class
+import java.util.Scanner;
+import java.text.DecimalFormat; 
+public class CurrencyExchange {
 
-# Log file
-*.log
+	public static void main(String[] args) {
 
-# BlueJ files
-*.ctxt
+		Scanner scanner = new Scanner(System.in);
+		final DecimalFormat df = new DecimalFormat("0.00"); 
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+		String trade = ("");
+		Double result;
+		Double change = 0.0;
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+		
+		String[] currency = { "Rupees", "Dollars", "Euros", "Lev", "Yen", "Yuan", "Ruble" };
+		System.out.println("=======================================================");
+		System.out.println("Welcome to currency exchange!");
+		System.out.println("Here are the avaliable currency exchange:");
+		System.out.println("");
+		System.out.println("Rupees");
+		System.out.println("Dollars");
+		System.out.println("Euros");
+		System.out.println("Lev");
+		System.out.println("Yen");
+		System.out.println("Yuan");
+		System.out.println("Ruble");
+		System.out.println("=======================================================");
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+		System.out.println("Which currency do you want to use?: ");
+		String exchange = scanner.nextLine();
+		while (true) {
+			if (exchange.equals(currency[0]) || exchange.equals(currency[1]) || exchange.equals(currency[2])
+					|| exchange.equals(currency[3]) || exchange.equals(currency[4]) || exchange.equals(currency[5])
+					|| exchange.equals(currency[6])) {
+				break;
+			}
+			System.out.println("Invalid currency...please type in the valid currency: ");
+			exchange = scanner.nextLine();
+		}
+
+		// Rupees
+		if (exchange.equals(currency[0])) {
+			{
+				System.out.println("You have selected " + currency[0]);
+				System.out.println("Enter the amount: ");
+				change = scanner.nextDouble();
+			}
+			System.out.println("Enter what currency you want convert to ?: ");
+			trade = scanner.next();
+			while (true) {
+				if (trade.equals(currency[1]) || trade.equals(currency[2]) || trade.equals(currency[3])
+						|| trade.equals(currency[4]) || trade.equals(currency[5]) || trade.equals(currency[6])) {
+					break;
+				}
+				System.out.println("Invalid currency!: ");
+				trade = scanner.next();
+			}
+			if (trade.equals(currency[1])) {
+				result = (change * 0.0120);
+				System.out.println("The amount is: " + (df.format(result)) + "$");
+			}
+			if (trade.equals(currency[2])) {
+				result = (change * 0.01102);
+				System.out.println("The amount is: " + (df.format(result)) + "€");
+			}
+			if (trade.equals(currency[3])) {
+				result = (change * 0.0216);
+				System.out.println("The amount is: " + (df.format(result)) + " Лв");
+			}
+			if (trade.equals(currency[4])) {
+				result = (change * 1.7333);
+				System.out.println("The amount is: " + (df.format(result)) + "¥");
+			}
+			if (trade.equals(currency[5])) {
+				result = (change * 0.0869);
+				System.out.println("The amount is: " + (df.format(result)) + "Ұ");
+			}
+			if (trade.equals(currency[6])) {
+				result = (change * 1.1369);
+				System.out.println("The amount is: " + (df.format(result)) + "₽");
+			}
+		}
+
+		// Dollars
+		if (exchange.equals(currency[1])) {
+			{
+				System.out.println("You have selected " + currency[1]);
+				System.out.println("Enter the amount: ");
+				change = scanner.nextDouble();
+			}
+			System.out.println("Enter what currency you want convert to ?: ");
+			trade = scanner.next();
+			while (true) {
+				if (trade.equals(currency[0]) || trade.equals(currency[2]) || trade.equals(currency[3])
+						|| trade.equals(currency[4]) || trade.equals(currency[5]) || trade.equals(currency[6])) {
+					break;
+				}
+				System.out.println("Invalid currency!: ");
+				trade = scanner.next();
+			}
+			if (trade.equals(currency[0])) {
+				result = (change * 82.5716);
+				System.out.println("The amount is: " + (df.format(result)) + "₹");
+			}
+			if (trade.equals(currency[2])) {
+				result = (change * 0.910);
+				System.out.println("The amount is: " + (df.format(result)) + "€");
+			}
+			if (trade.equals(currency[3])) {
+				result = (change * 1.7879);
+				System.out.println("The amount is: " + (df.format(result)) + " Лв");
+			}
+			if (trade.equals(currency[4])) {
+				result = (change * 143.5120);
+				System.out.println("The amount is: " + (df.format(result)) + "¥");
+			}
+			if (trade.equals(currency[5])) {
+				result = (change * 7.1738);
+				System.out.println("The amount is: " + (df.format(result)) + "Ұ");
+			}
+			if (trade.equals(currency[6])) {
+				result = (change * 94.0125);
+				System.out.println("The amount is: " + (df.format(result)) + "₽");
+			}
+		}
+
+		// Euros
+		if (exchange.equals(currency[2])) {
+			{
+				System.out.println("You have selected " + currency[2]);
+				System.out.println("Enter the amount: ");
+				change = scanner.nextDouble();
+			}
+			System.out.println("Enter what currency you want convert to ?: ");
+			trade = scanner.next();
+
+			while (true) {
+				if (trade.equals(currency[0]) || trade.equals(currency[1]) || trade.equals(currency[3])
+						|| trade.equals(currency[4]) || trade.equals(currency[5]) || trade.equals(currency[6])) {
+					break;
+				}
+				System.out.println("Invalid currency!: ");
+				trade = scanner.next();
+			}
+			if (trade.equals(currency[0])) {
+				result = (change * 90.3220);
+				System.out.println("The amount is: " + (df.format(result)) + "₹");
+			}
+			if (trade.equals(currency[1])) {
+				result = (change * 1.0921);
+				System.out.println("The amount is: " + (df.format(result)) + "$");
+			}
+			if (trade.equals(currency[3])) {
+				result = (change * 1.9658);
+				System.out.println("The amount is: " + (df.format(result)) + " Лв");
+			}
+			if (trade.equals(currency[4])) {
+				result = (change * 157.1108);
+				System.out.println("The amount is: " + (df.format(result)) + "¥");
+			}
+			if (trade.equals(currency[5])) {
+				result = (change * 7.8295);
+				System.out.println("The amount is: " + (df.format(result)) + "Ұ");
+			}
+			if (trade.equals(currency[6])) {
+				result = (change * 102.7369);
+				System.out.println("The amount is: " + (df.format(result)) + "₽");
+			}
+		}
+
+		// Lev
+		if (exchange.equals(currency[3])) {
+			{
+				System.out.println("You have selected " + currency[3]);
+				System.out.println("Enter the amount: ");
+				change = scanner.nextDouble();
+			}
+			System.out.println("Enter what currency you want convert to ?: ");
+			trade = scanner.next();
+
+			while (true) {
+				if (trade.equals(currency[0]) || trade.equals(currency[1]) || trade.equals(currency[2])
+						|| trade.equals(currency[4]) || trade.equals(currency[5]) || trade.equals(currency[6])) {
+					break;
+				}
+				System.out.println("Invalid currency!: ");
+				trade = scanner.next();
+			}
+			if (trade.equals(currency[0])) {
+				result = (change * 46.2404);
+				System.out.println("The amount is: " + (df.format(result)) + "₹");
+			}
+			if (trade.equals(currency[1])) {
+				result = (change * 0.5595);
+				System.out.println("The amount is: " + (df.format(result)) + "$");
+			}
+			if (trade.equals(currency[2])) {
+				result = (change * 0.5119);
+				System.out.println("The amount is: " + (df.format(result)) + "€");
+			}
+			if (trade.equals(currency[4])) {
+				result = (change * 80.4736);
+				System.out.println("The amount is: " + (df.format(result)) + "¥");
+			}
+			if (trade.equals(currency[5])) {
+				result = (change * 3.9985);
+				System.out.println("The amount is: " + (df.format(result)) + "Ұ");
+			}
+			if (trade.equals(currency[6])) {
+				result = (change * 52.5595);
+				System.out.println("The amount is: " + (df.format(result)) + "₽");
+			}
+		}
+
+		// Yen
+		if (exchange.equals(currency[4])) {
+			{
+				System.out.println("You have selected " + currency[4]);
+				System.out.println("Enter the amount: ");
+				change = scanner.nextDouble();
+			}
+			System.out.println("Enter what currency you want convert to ?: ");
+			trade = scanner.next();
+
+			while (true) {
+				if (trade.equals(currency[0]) || trade.equals(currency[1]) || trade.equals(currency[2])
+						|| trade.equals(currency[3]) || trade.equals(currency[5]) || trade.equals(currency[6])) {
+					break;
+				}
+				System.out.println("Invalid currency!: ");
+				trade = scanner.next();
+			}
+			if (trade.equals(currency[0])) {
+				result = (change * 0.5860);
+				System.out.println("The amount is: " + (df.format(result)) + "₹");
+			}
+			if (trade.equals(currency[1])) {
+				result = (change * 0.0070);
+				System.out.println("The amount is: " + (df.format(result)) + "$");
+			}
+			if (trade.equals(currency[2])) {
+				result = (change * 0.0064);
+				System.out.println("The amount is: " + (df.format(result)) + "€");
+			}
+			if (trade.equals(currency[3])) {
+				result = (change * 0.0125);
+				System.out.println("The amount is: " + (df.format(result)) + " Лв");
+			}
+			if (trade.equals(currency[5])) {
+				result = (change * 0.0499);
+				System.out.println("The amount is: " + (df.format(result)) + "Ұ");
+			}
+			if (trade.equals(currency[6])) {
+				result = (change * 0.6541);
+				System.out.println("The amount is: " + (df.format(result)) + "₽");
+			}
+		}
+
+		// Yuan
+		if (exchange.equals(currency[5])) {
+			{
+				System.out.println("You have selected " + currency[5]);
+				System.out.println("Enter the amount: ");
+				change = scanner.nextDouble();
+			}
+			System.out.println("Enter what currency you want convert to ?: ");
+			trade = scanner.next();
+
+			while (true) {
+				if (trade.equals(currency[0]) || trade.equals(currency[1]) || trade.equals(currency[2])
+						|| trade.equals(currency[3]) || trade.equals(currency[4]) || trade.equals(currency[6])) {
+					break;
+				}
+				System.out.println("Invalid currency!: ");
+				trade = scanner.next();
+			}
+			if (trade.equals(currency[0])) {
+				result = (change * 11.5664);
+				System.out.println("The amount is: " + (df.format(result)) + "₹");
+			}
+			if (trade.equals(currency[1])) {
+				result = (change * 0.1398);
+				System.out.println("The amount is: " + (df.format(result)) + "$");
+			}
+			if (trade.equals(currency[2])) {
+				result = (change * 0.1278);
+				System.out.println("The amount is: " + (df.format(result)) + "€");
+			}
+			if (trade.equals(currency[3])) {
+				result = (change * 0.2501);
+				System.out.println("The amount is: " + (df.format(result)) + " Лв");
+			}
+			if (trade.equals(currency[4])) {
+				result = (change * 20.0737);
+				System.out.println("The amount is: " + (df.format(result)) + "¥");
+			}
+			if (trade.equals(currency[6])) {
+				result = (change * 13.0984);
+				System.out.println("The amount is: " + (df.format(result)) + "₽");
+			}
+		}
+
+		// Ruble
+		if (exchange.equals(currency[6])) {
+			{
+				System.out.println("You have selected " + currency[6]);
+				System.out.println("Enter the amount: ");
+				change = scanner.nextDouble();
+			}
+			System.out.println("Enter what currency you want convert to ?: ");
+			trade = scanner.next();
+
+			while (true) {
+				if (trade.equals(currency[0]) || trade.equals(currency[1]) || trade.equals(currency[2])
+						|| trade.equals(currency[3]) || trade.equals(currency[4]) || trade.equals(currency[5])) {
+					break;
+				}
+				System.out.println("Invalid currency!: ");
+				trade = scanner.next();
+			}
+			if (trade.equals(currency[0])) {
+				result = (change * 0.8813);
+				System.out.println("The amount is: " + (df.format(result)) + "₹");
+			}
+			if (trade.equals(currency[1])) {
+				result = (change * 0.0107);
+				System.out.println("The amount is: " + (df.format(result)) + "$");
+			}
+			if (trade.equals(currency[2])) {
+				result = (change * 0.0098);
+				System.out.println("The amount is: " + (df.format(result)) + "€");
+			}
+			if (trade.equals(currency[3])) {
+				result = (change * 0.0191);
+				System.out.println("The amount is: " + (df.format(result)) + " Лв");
+			}
+			if (trade.equals(currency[4])) {
+				result = (change * 1.5308);
+				System.out.println("The amount is: " + (df.format(result)) + "¥");
+			}
+			if (trade.equals(currency[5])) {
+				result = (change * 0.0762);
+				System.out.println("The amount is: " + (df.format(result)) + "Ұ");
+			}
+		}
+
+		
+	}
+}
